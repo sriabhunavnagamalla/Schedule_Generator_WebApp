@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            background-color: #007BFF;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            width: 800px;
+            height: 110px;
+            margin-right: 10px;
+        }
+        .login-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-grow: 1;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            background-color: #007BFF;
+            color: white;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="d:\ABHINAV Btech\vbit.logo.jpeg" alt="College Logo">
+        <img src="d:\ABHINAV Btech\vbitclg,img.jpg" alt="College pic">
+    </div>
+    <div class="login-section">
+        <div class="login-container">
+            <img src="d:\ABHINAV Btech\vbitsinglelogo.jpeg" alt="Faculty Login">
+            <h1>Faculty Login</h1>
+            <form action="home.html" method="POST">
+                <input type="text" name="faculty_username" placeholder="Username" required>
+                <input type="password" name="faculty_password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div class="login-container">
+            <img src="d:\ABHINAV Btech\vbitsinglelogo.jpeg" alt="Student Login">
+            <h1>Student Login</h1>
+            <form action="home.html" method="POST">
+                <input type="text" name="student_username" placeholder="Username" required>
+                <input type="password" name="student_password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 College Name. All rights reserved.</p>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    fetch('authenticate.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: username=${username}&password=${password}
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = 'student.html';
+        } else {
+            document.getElementById('errorMessage').textContent = 'Invalid username or password';
+        }
+    });
+});
+    </script>
+</body>
+</html>

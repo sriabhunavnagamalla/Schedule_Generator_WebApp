@@ -1,0 +1,184 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+nav {
+  background-color:#080808;
+  color: #ffffff;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.right-align {
+  text-align: right;
+}
+
+nav a{
+  padding-left: 50px;
+  align-items: center;
+  font-size:130%;
+  color: white;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #ddd;
+  color:white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+ 
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+
+logo {
+  width: 60px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 10px; /* Optional: Add border-radius for a rounded effect */
+  padding-top: 5px;
+  padding-bottom:5px ;
+}
+
+  .logo h1 img {
+    display: inline;
+  justify-content: space-between;
+
+}
+h1 {
+  display: inline-block; /* Display the heading as inline-block */
+  vertical-align: middle; /* Align the heading vertically in the middle */
+  margin-left: 10px; /* Add some spacing between the image and the heading */
+  color: #333;
+  font-style: italic;
+}
+
+button {
+ 
+  width: 20%; /* Set the width to 100% for full-width buttons */
+  margin: 10px 0; /* Provide vertical spacing between buttons */
+  background-color: #4CAF50;
+  color: rgb(228, 230, 224);
+  border: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+.box-container {
+  display: flex;
+  flex-wrap:wrap; /* Allow flex items to wrap to the next line */
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.I-year,
+.II-year,
+.III-year,
+.IV-year {
+  width: calc(33.33% - 20px);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Adjust the height as needed */
+  border-radius: 40px;
+  color: white;
+  margin-bottom: 20px; /* Add margin to create space between boxes */
+}
+
+/* Decrease the size of boxes on hover and add box shadow */
+.I-year:hover,
+.II-year:hover,
+.III-year:hover,
+.IV-year:hover {
+  transform: scale(0.9); /* Reduce size to 90% */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+  color: rgb(32, 19, 214);
+}
+
+/* Styles for each box */
+.I-year {
+  height: 150px; /* Adjust the height as needed */
+  background-color: #709cf9; /* Example background color */
+  border-radius: 40px;
+  height: 200px;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+.logout-link {
+  text-align-last: right;
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+}
+.logout-link:hover {
+  background-color: #d7d7d7;
+}
+.II-year {
+  height: 150px; /* Adjust the height as needed */
+  background-color: #0a90ea; /* Example background color */
+  border-radius: 40px;
+  height: 200px;
+  color: white;
+}
+
+.III-year {
+  height: 150px; /* Adjust the height as needed */
+  background-color: #2e9cd4; /* Example background color */
+  border-radius: 40px;
+  height: 200px;
+  color: white;
+}
+
+.IV-year{
+  height: 150px; /* Adjust the height as needed */
+  background-color: #095a82; /* Example background color */
+  border-radius: 40px;
+  height: 200px;
+  color: white;
+}
